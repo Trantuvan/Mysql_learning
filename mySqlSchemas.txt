@@ -1,0 +1,6 @@
+INT  --Whole Numbers
+DECIMAL(M,N) --Decimal Numbers - Extract Value (M is the total #digits, N is the #behind decimal point)
+VARCHAR(1)  --String of text of length 1
+BLOB        --Binary Large Object, Stores large data
+DATE        --'YYYY-MM-DD'
+TIMESTAMP() --'YYYY-MM-DD HH:MM:SS' -used for recording 
