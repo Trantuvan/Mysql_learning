@@ -1,0 +1,19 @@
+-- create table name and schemas for table
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    std_name VARCHAR(20),
+    major VARCHAR(20)
+    -- PRIMARY KEY(student_id) 2 way to do it.
+);
+
+-- to show the table in console 
+DESCRIBE student;
+
+-- delete table
+DROP TABLE student;
+-- delete column
+ALTER TABLE student DROP COLUMN gpa;
+
+-- modify the table
+-- add GPA col with type decimal (have total 3 digits, 2 digits after decimal place)
+ALTER TABLE student ADD gpa DECIMAL(3,2);
