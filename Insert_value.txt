@@ -1,0 +1,17 @@
+-- YOU CANNOT INSERT DUPLICATE KEY FOR primary key
+
+-- Insert 1 row into table
+INSERT INTO student VALUES(
+    1, "Jack", "Biology"
+);
+INSERT INTO student VALUES(
+    2, "Kate", "Sociology"
+);
+
+-- Insert specific col 
+INSERT INTO student(student_id, std_name) VALUES(
+    3, "Clare"
+);
+
+-- show the value inside table
+SELECT * FROM student;

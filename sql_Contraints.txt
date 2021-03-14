@@ -1,0 +1,63 @@
+DROP TABLE student;
+
+-- create a table with not null and force to insert into that col
+CREATE TABLE student (
+    student_id INT ,
+    std_name VARCHAR(20) NOT NULL, 
+    major VARCHAR(20) UNIQUE, 
+    PRIMARY KEY(student_id)
+);
+
+SELECT * FROM student;
+
+DESCRIBE student;
+
+-- Insert 1 row into table
+INSERT INTO student VALUES(
+    1, "Jack", "Biology"
+);
+INSERT INTO student VALUES(
+    2, "Kate", "Sociology"
+);
+
+-- Insert specific col 
+INSERT INTO student VALUES(
+    3, NULL, "Chemistry"
+);
+
+DROP TABLE student;
+
+-- NOT NULL --> phai co gia tri
+-- UNIQUE --> phai unique
+-- DEFAULT --> neu khong dien se tra lai gia tri default
+-- AUTO_INCREMENT --> DATABASE tu dong increment
+CREATE TABLE student (
+    student_id INT AUTO_INCREMENT ,
+    std_name VARCHAR(20), 
+    major VARCHAR(20) DEFAULT "undecided", 
+    PRIMARY KEY(student_id)
+);
+
+SELECT * FROM student;
+
+DESCRIBE student;
+
+-- Insert 1 row into table
+INSERT INTO student(std_name,major) VALUES(
+    "Jack", "Biology"
+);
+INSERT INTO student(std_name,major) VALUES(
+    "Kate", "Sociology"
+);
+
+-- Insert specific col 
+INSERT INTO student(std_name,major) VALUES(
+   NULL, "Chemistry"
+);
+
+INSERT INTO student(std_name,major) VALUES(
+   "Jack", "Biology"
+);
+INSERT INTO student(std_name,major) VALUES(
+   "Mike", "Computer Science"
+);
