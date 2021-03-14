@@ -4,3 +4,14 @@ VARCHAR(1)  --String of text of length 1
 BLOB        --Binary Large Object, Stores large data
 DATE        --'YYYY-MM-DD'
 TIMESTAMP() --'YYYY-MM-DD HH:MM:SS' -used for recording 
+
+-- create the table name student in database girrafe
+CREATE TABLE student (
+    student_id INT PRIMARY KEY,
+    std_name VARCHAR(20),
+    major VARCHAR(20)
+    -- PRIMARY KEY(student_id) 2 way to do it.
+);
+
+-- to show the table in console 
+DESCRIBE student;
