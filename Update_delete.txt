@@ -1,0 +1,30 @@
+SELECT * FROM student;
+
+-- Update the database where Bilogy to Bio
+UPDATE student
+SET major = "Bio"
+WHERE major = "Biology";
+
+UPDATE student
+SET major = "Comp-Sci"
+WHERE major = "Computer Science";
+
+UPDATE student
+SET major = "Comp-Sci"
+WHERE student_id = 4;
+
+UPDATE student
+SET major = "Biochemistry"
+WHERE major = "Bio" OR major = "Chemistry";
+
+UPDATE student
+SET major = "undecided", std_name = "Tom"
+WHERE student_id = 1;
+
+UPDATE student
+SET std_name = "Claire"
+WHERE std_name = "";
+
+-- delete row
+DELETE FROM student
+WHERE student_id = 3;
